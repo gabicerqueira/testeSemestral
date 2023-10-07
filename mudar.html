@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .container-dois {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="gabi">GABI</button>
+    <button id="lele">LELE</button>
+
+    <div class="container container-um">
+        <h1>GABI</h1>
+        <h2>ESSA PARTE É DA GABI</h2>
+    </div>
+
+    <div class="container container-dois">
+        <h1>LELE</h1>
+        <h2>ESSA PARTE É DA LELE</h2>
+    </div>
+
+    <script>
+        let containerUm = document.querySelector('.container-um');
+        let containerDois = document.querySelector('.container-dois');
+        let button1 = document.getElementById('gabi');
+        let button2 = document.getElementById('lele');
+
+        button1.addEventListener('click', function () {
+            containerUm.style.display = 'block';
+            containerDois.style.display = 'none';
+        });
+
+        button2.addEventListener('click', function () {
+            containerUm.style.display = 'none';
+            containerDois.style.display = 'block';
+        });
+
+
+    </script>
+</body>
+
+</html>
