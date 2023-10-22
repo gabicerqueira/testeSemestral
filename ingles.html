@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+
+    <style>
+        *{
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            background: linear-gradient(#ffeaaa, #91dbdb, #ffabd2);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+
+        @font-face {
+            font-family:'Raleway' ;
+            src: url(font/Raleway-Regular.ttf);
+        }
+
+        .btn{
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            font: 300 40px 'Poppins', sans-serif;
+            padding: 15px 30px;
+            border-radius: 15px;
+            transition: ease-in-out 0.4s;
+            cursor: pointer;
+            width: 200px;
+            box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.507);
+        }
+
+        .botaoS{
+            transition: 0.4s;
+        }
+
+        .botaoS:hover{
+            transform: scale(0.8);
+            transition: 0.4s;
+        }
+
+        .tituloPrincipal{
+            font: 700 50px 'Raleway', sans-serif;
+        }
+
+        .titulo{
+            text-align: center;
+            padding-bottom: 70px;
+            margin-top: 100px;
+        }
+
+        .botoes{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 400px;
+
+        }
+
+        .container-dois{
+                display: none;
+            }
+
+        img{
+            width: 300px;
+            margin-top: 20px;
+        }
+
+        @media screen and (max-width: 400px){
+            .botoes{
+                margin: 0;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .titulo img{
+                width: 120px;
+            }
+
+            .botaoS{
+                padding-bottom: 30px;
+            }
+
+        }
+
+        @media screen and (max-width: 768px){
+            .botoes{
+                margin: 0;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 50px;
+            }
+
+            .titulo{
+                padding-bottom: 50px;
+                margin-top: 40px;
+            }
+
+            .tituloPrincipal{
+                font-size: 45px;
+            }
+
+            img{
+                width: 180px;
+            }
+
+             .botaoS{
+                padding-bottom: 30px;
+            } 
+
+        
+        }
+
+    </style>
+</head>
+<body>
+    <button id="gabi" class="btn">Portugues</button>
+    <button id="lele" class="btn">Ingles</button>
+    <section class="container-um">
+    <div class="titulo">
+        <h1 class="tituloPrincipal">Quer sentir nostalgia?</h1>
+        <img src="fita.png" alt="">
+    </div>
+    <div class="botoes">
+        <div class="botaoS">
+            <button class="btn" onclick="sim()">SIM</button>
+        </div>
+        <div class="botaoN">
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NÃO</button>
+        </div>
+    </div>
+</section>
+
+    <section class="container-dois">
+    <div class="titulo">
+        <h1 class="tituloPrincipal">Wanna fell nostalgic?</h1>
+        <img src="fita.png" alt="">
+    </div>
+    <div class="botoes">
+        <div class="botaoS">
+            <button class="btn" onclick="sim()">YES</button>
+        </div>
+        <div class="botaoN">
+            <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)">NO</button>
+        </div>
+    </div>
+</section>
+
+    <script>
+       function sim(){
+        location.href = "https://www.youtube.com/watch?v=I5GjALNHzPQ"
+       } 
+
+       function desvia(btn){
+        btn.style.position = 'absolute';
+        btn.style.bottom = posicao(10, 80);
+        btn.style.left = posicao(10, 80);
+       }
+
+       function posicao(min, max){
+        return(Math.random()*(max - min) + min)+"%";
+       }
+
+       let containerUm = document.querySelector('.container-um');
+        let containerDois = document.querySelector('.container-dois');
+        let button1 = document.getElementById('gabi');
+        let button2 = document.getElementById('lele');
+
+        button1.addEventListener('click', function () {
+            containerUm.style.display = 'block';
+            containerDois.style.display = 'none';
+        });
+
+        button2.addEventListener('click', function () {
+            containerUm.style.display = 'none';
+            containerDois.style.display = 'block';
+        });
+
+    </script>
+</body>
+</html>
