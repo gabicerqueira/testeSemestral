@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Seu Arquivo</title>
+</head>
+<body>
+    <h1>Quem Somos</h1>
+
+    <button id="botao-gabi">Mostrar Gabi</button>
+    <button id="botao-lele">Mostrar Lele</button>
+
+    <section id="gabi">
+        <h2>Gabi</h2>
+        <p>Conteúdo da Gabi aqui.</p>
+    </section>
+
+    <section id="lele">
+        <h2>Lele</h2>
+        <p>Conteúdo da Lele aqui.</p>
+    </section>
+
+    <script>
+        // JavaScript para controlar a visibilidade das seções com base na âncora
+        const gabiSection = document.getElementById('gabi');
+        const leleSection = document.getElementById('lele');
+        
+        const botaoGabi = document.getElementById('botao-gabi');
+        const botaoLele = document.getElementById('botao-lele');
+
+        // Verifica a âncora na URL
+        const currentAnchor = window.location.hash;
+
+        // Esconde a seção que não corresponde à âncora atual
+        if (currentAnchor === '#gabi') {
+            gabiSection.style.display = 'block';
+            leleSection.style.display = 'none';
+            botaoGabi.style.backgroundColor = '#2ae334'
+        } else if (currentAnchor === '#lele') {
+            gabiSection.style.display = 'none';
+            leleSection.style.display = 'block';
+            botaoLele.style.backgroundColor = '#2ae334'
+        }
+
+
+        // Função para mostrar a seção Gabi
+        botaoGabi.addEventListener('click', function () {
+            gabiSection.style.display = 'block';
+            leleSection.style.display = 'none';
+            botaoGabi.style.backgroundColor = '#2ae334'
+            botaoLele.style.backgroundColor = ''
+        });
+
+        // Função para mostrar a seção Lele
+        botaoLele.addEventListener('click', function () {
+            gabiSection.style.display = 'none';
+            leleSection.style.display = 'block';
+            botaoLele.style.backgroundColor = '#2ae334'
+            botaoGabi.style.backgroundColor = ''
+        });
+    </script>
+</body>
+</html>
+
