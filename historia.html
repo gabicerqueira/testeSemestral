@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #3498db;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .image {
+            width: 200px;
+            height: 200px;
+            margin-left: 20px;
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #000000;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .button:hover + .image-container .text-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <button class="button">B</button>
+    <div class="image-container">
+        <img src="camisaJapão.jpg" alt="Sua Imagem" class="image">
+        <div class="text-overlay">Texto sobre a imagem</div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
