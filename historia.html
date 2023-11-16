@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+
+        
+
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
         .container {
-            position: relative;
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        p{
+            width: 300px;
         }
 
         .button {
-            width: 50px;
-            height: 50px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
-            background-color: #3498db;
-            border: none;
+            background-color: transparent;
+            border: 3px solid salmon;
             color: #fff;
             font-size: 16px;
             cursor: pointer;
@@ -37,22 +54,30 @@
             transition: opacity 0.3s ease-in-out;
         }
 
-        .button:hover + .image-container .text-overlay {
+        .button:hover+.image-container .text-overlay {
             opacity: 1;
+        }
+
+        .rosa {
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
-<body>
 
-<div class="container">
-    <button class="button">B</button>
-    <div class="image-container">
-        <img src="camisaJapão.jpg" alt="Sua Imagem" class="image">
-        <div class="text-overlay">Texto sobre a imagem</div>
+<body>
+    <div class="rosa">
+        <img src="image 230.png" alt="">
     </div>
-</div>
+    <div class="container">
+        <div class="image-container">
+            <img src="camisaJapão.jpg" alt="Sua Imagem" class="image">
+            <div class="text-overlay">Texto sobre a imagem</div>
+        </div>
+        <button class="button"></button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure velit culpa eos et dolore, adipisci ipsa provident temporibus quis ducimus itaque dolorum laborum corrupti repudiandae consectetur reprehenderit totam earum cumque?</p>
+    </div>
 
 </body>
+
 </html>
-
-
